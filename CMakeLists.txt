@@ -34,7 +34,8 @@ SET(ImGuizmo_HDRS
     )
 
 # add the main library
-add_library(ImGuizmo ${ImGuizmo_SRCS} ${ImGuizmo_HDRS})
+ADD_LIBRARY(ImGuizmo SHARED ${imgui_SRCS} ${imgui_HDRS})
+ADD_LIBRARY(ImGuizmo ${imgui_SRCS} ${imgui_HDRS})
  
 install (TARGETS ImGuizmo DESTINATION ${CMAKE_INSTALL_LIBDIR})
 install (FILES ImGuizmo.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
